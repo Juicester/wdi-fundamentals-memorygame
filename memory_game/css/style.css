@@ -1,13 +1,16 @@
 /* CSS File */
 body {
 	text-align: center;
+	margin: 0 auto;
 }
 h1 {
 	font-family: "Raleway", sans-serif;
-	color: #0D2C40;
+	color: #FFFFFF;
 	font-weight: 400;
 	letter-spacing: 1px;
 	font-size: 45px;
+	margin: 0 auto;
+	text-transform: uppercase;
 }
 h2 {
 	font-family: "Raleway", sans-serif;
@@ -15,6 +18,7 @@ h2 {
 	font-weight: 600;
 	letter-spacing: 1px;
 	font-size: 20px;
+	text-transform: uppercase;
 }
 p {
 	font-family: "Droid Serif", serif;
@@ -23,9 +27,54 @@ p {
 }
 a {
 	font-family: "Raleway", sans-serif;
-	color: #F15B31
+	color: #FFFFFF;
 	letter-spacing: 1px;
 	font-weight: 600;
 	font-size: 18px;
 	text-decoration: none;
+	margin: 0 20px;
+	text-transform: uppercase;
+}
+header {
+	background-color: #F15B31;
+	color: #FFFFFF;
+	padding: 30px 20px;
+}
+nav {
+	background-color: #00A6B3;
+	color: #FFFFFF;
+	padding: 20px 0;
+}
+main {
+	width: 850px;
+	margin: 35px auto;
+}
+img {
+	margin: 40px 8px 0px 8px;
+}
+
+
+
+.fa {
+		padding: 20px;
+		font-size: 30px;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		text-decoration: none;
+	    border-radius: 50%;
+}
+.fa:hover {
+		opacity: 0.7;
+}
+/* Facebook */
+.fa-facebook {
+		background: #3B5998;
+		color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+		background: #55ACEE;
+		color: white;
 }
