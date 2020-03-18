@@ -1,24 +1,47 @@
 // Main Javascript File
 //console.log("Up and running!");
 
-let cards = ["queen", "queen", "king", "king"];
+let cards = [
+	{
+		rank: "queen",
+		suit: "hearts",
+		cardImage: "images/queen-of-hearts.png"
+	},
+	{
+		rank: "queen",
+		suit: "diamonds",
+		cardImage: "images/queen-of-diamonds.png"
+	},
+	{
+		rank: "king",
+		suit: "hearts",
+		cardImage: "images/king-of-hearts.png"
+	},
+	{
+		rank: "king",
+		suit: "hearts",
+		cardImage: "images/king-of-diamonds.png"
+	}
+];
 let cardsInPlay = [];
 
 function checkForMatch() {
 	if (cardsInPlay.length === 2) {
 		if (cardsInPlay[0] === cardsInPlay[1]) {
-			console.log("You found a match.");
+			alert("You found a match.");
 		} 
 		else {
-			console.log("Sorry, try again.");
+			alert("Sorry, try again.");
 		}
 	}
 }
 
 function flipCard(cardID) {
-	console.log("User flipped " + cards[cardID]);
-
-	cardsInPlay.push(cards[cardID]);
+	console.log("User flipped " + cards[cardID].rank);
+	console.log(cards[cardID].suit);
+	console.log(cards[cardID].cardImage);
+	
+	cardsInPlay.push(cards[cardID].rank);
 
 	checkForMatch();
 }
