@@ -1,6 +1,6 @@
 // Main Javascript File
 //console.log("Up and running!");
-
+let score = 0;
 let cards = [
 	{
 		rank: "queen",
@@ -38,6 +38,9 @@ function createBoard() {
 function checkForMatch() {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
 		alert("You found a match.");
+		//added score logic
+		score += 1;
+		document.getElementById("score").textContent = "Score: " + score;
 	} 
 	else {
 		alert("Sorry, try again.");
@@ -58,6 +61,24 @@ function flipCard() {
 	}
 };
 
-//flipCard(0);
-//flipCard(2);
+function reset() {
+	//i needed it to be <= because when i pop it shortens the length by 1
+	// i think i just hacked that and it wont work for things greater than 2
+	for (let i = 0; i <= cardsInPlay.length; i++){
+		cardsInPlay.pop();
+	}
+	//createBoard() didn't work because it just made a new board underneath
+
+	let gameBoard = document.getElementById("game-board").childNodes;
+	
+	for (let j = 0; j < gameBoard.length; j++){
+		gameBoard[j].setAttribute("src", "images/back.png");
+	}
+}
+
 createBoard();
+document.querySelector("button").addEventListener("click", reset);
+
+
+
+
